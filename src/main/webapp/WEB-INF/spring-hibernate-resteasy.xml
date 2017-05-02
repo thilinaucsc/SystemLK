@@ -28,6 +28,11 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.system.model.Customer</value>
+				<value>com.system.model.User</value>
+				<value>com.system.model.Company</value>
+				<value>com.system.model.Item</value>
+				<value>com.system.model.Sale</value>
+				<value>com.system.model.SaleItem</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
