@@ -24,6 +24,11 @@ public class CustomerServiceImpl implements ICustomerService {
 		newCustomer.setCustomerId(customerType.getCustomerId());
 		newCustomer.setName(customerType.getName());
 		newCustomer.setAge(customerType.getAge());
+		newCustomer.setAddress(customerType.getAddress());
+		newCustomer.setPassword(customerType.getPassword());
+		newCustomer.setDiscount(customerType.getDiscount());
+		newCustomer.setEmail(customerType.getEmail());
+		newCustomer.setRegistor(customerType.getRegistor());
 		return customerDAO.insertNewCustomer(newCustomer);
 	}
 
@@ -36,6 +41,11 @@ public class CustomerServiceImpl implements ICustomerService {
 		customerType.setCustomerId(getCustomer.getCustomerId());
 		customerType.setName(getCustomer.getName());
 		customerType.setAge(getCustomer.getAge());
+		customerType.setAddress(getCustomer.getAddress());
+		customerType.setPassword(getCustomer.getPassword());
+		customerType.setDiscount(getCustomer.getDiscount());
+		customerType.setEmail(getCustomer.getEmail());
+		customerType.setRegistor(getCustomer.getRegistor());
 		return customerType;
 	}
 
@@ -46,6 +56,11 @@ public class CustomerServiceImpl implements ICustomerService {
 		modifyCustomer.setCustomerId(customerType.getCustomerId());
 		modifyCustomer.setName(customerType.getName());
 		modifyCustomer.setAge(customerType.getAge());
+		modifyCustomer.setAddress(customerType.getAddress());
+		modifyCustomer.setPassword(customerType.getPassword());
+		modifyCustomer.setDiscount(customerType.getDiscount());
+		modifyCustomer.setEmail(customerType.getEmail());
+		modifyCustomer.setRegistor(customerType.getRegistor());
 		return customerDAO.updateCustomer(modifyCustomer);
 	}
 
@@ -56,6 +71,11 @@ public class CustomerServiceImpl implements ICustomerService {
 		removeCustomer.setCustomerId(customerType.getCustomerId());
 		removeCustomer.setName(customerType.getName());
 		removeCustomer.setAge(customerType.getAge());
+		removeCustomer.setAddress(customerType.getAddress());
+		removeCustomer.setPassword(customerType.getPassword());
+		removeCustomer.setDiscount(customerType.getDiscount());
+		removeCustomer.setEmail(customerType.getEmail());
+		removeCustomer.setRegistor(customerType.getRegistor());
 		return customerDAO.deleteCustomer(removeCustomer);
 	}
 
@@ -70,6 +90,11 @@ public class CustomerServiceImpl implements ICustomerService {
 			customerType.setCustomerId(customer.getCustomerId());
 			customerType.setName(customer.getName());
 			customerType.setAge(customer.getAge());
+			customerType.setAddress(customer.getAddress());
+			customerType.setPassword(customer.getPassword());
+			customerType.setDiscount(customer.getDiscount());
+			customerType.setEmail(customer.getEmail());
+			customerType.setRegistor(customer.getRegistor());
 			customerListType.getCustomerType().add(customerType);
 		}
 		return customerListType;

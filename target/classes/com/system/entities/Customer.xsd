@@ -10,6 +10,11 @@
 				<xsd:element name="customerId" type="xsd:int" />
 				<xsd:element name="name" type="xsd:string" />
 				<xsd:element name="age" type="xsd:int" />
+				<xsd:element name="address" type="xsd:string" />
+				<xsd:element name="discount" type="xsd:string" />
+				<xsd:element name="password" type="xsd:string" />
+				<xsd:element name="email" type="xsd:string" />
+				<xsd:element name="registor" type="xsd:int" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>

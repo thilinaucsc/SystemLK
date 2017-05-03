@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://system.lk/slk/Company" xmlns:tns="http://system.lk/slk/Company"
+	elementFormDefault="qualified">
+
+	<!-- player object with three attributes -->
+	<xsd:element name="CompanyType">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:int" />
+				<xsd:element name="name" type="xsd:string" />
+				<xsd:element name="userID" type="xsd:int" />
+				<xsd:element name="location" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- an object to contain lists of players referencing above player object -->
+	<xsd:element name="CompanyListType">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tns:CompanyType" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

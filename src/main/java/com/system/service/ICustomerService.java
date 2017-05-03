@@ -18,8 +18,8 @@ public interface ICustomerService {
 
 	// Basic CRUD operations for Customer Service
 
-	// http://localhost:8080/RestEasy-Spring-Hibernate/resteasy/customerservice/addcustomer  - Tomcat 7.0.x
-	// http://localhost:9090/RestEasy-Spring-Hibernate/resteasy/customerservice/addcustomer  - JBoss AS7
+	// http://localhost:8080/SystemLK/resteasy/customerservice/addcustomer  - Tomcat 7.0.x
+	// http://localhost:9090/SystemLK/resteasy/customerservice/addcustomer  - JBoss AS7
 	@POST
 	@Path("addcustomer")
 	@Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
