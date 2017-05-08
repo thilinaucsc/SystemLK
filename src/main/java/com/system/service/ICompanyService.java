@@ -13,9 +13,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import lk.system.slk.company.CompanyListType;
 import lk.system.slk.company.CompanyType;
-import lk.system.slk.customer.CustomerListType;
-import lk.system.slk.customer.CustomerType;
 
 /**
  * @author thili
@@ -24,51 +23,43 @@ import lk.system.slk.customer.CustomerType;
 @Path("/companyservice")
 public interface ICompanyService {
 	
-	// http://localhost:8080/SystemLK/resteasy/companyservice/addcustomer -Tomcat 7.0.x
-	// http://localhost:9090/SystemLK/resteasy/companyservice/addcustomer -JBoss AS7
+	// http://localhost:8080/SystemLK/resteasy/companyservice/addcompany -Tomcat 7.0.x
+	// http://localhost:9090/SystemLK/resteasy/companyservice/addcompany -JBoss AS7
 	@POST
 	@Path("addcompany")
 	@Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_FORM_URLENCODED })
 	public String createOrSaveNewCompanyInfo(CompanyType companyType);
 
-	// http://localhost:8080/SystemLK/resteasy/companyservice/getcustomer/1 -
-	// Tomcat 7.0.x
-	// http://localhost:9090/SystemLK/resteasy/companyservice/getcustomer/1 -
-	// JBoss AS7
+	// http://localhost:8080/SystemLK/resteasy/companyservice/getcompany/1 -  Tomcat 7.0.x
+	// http://localhost:9090/SystemLK/resteasy/companyservice/getcompany/1 - JBoss AS7
 	@GET
-	@Path("getcustomer/{id}")
+	@Path("getcompany/{id}")
 	@Consumes({ MediaType.APPLICATION_FORM_URLENCODED })
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	public CustomerType getCustomerInfo(@PathParam("id") int customerId);
+	public CompanyType getCompanyInfo(@PathParam("id") int companyId);
 
-	// http://localhost:8080/SystemLK/resteasy/companyservice/updatecustomer -
-	// Tomcat 7.0.x
-	// http://localhost:9090/SystemLK/resteasy/companyservice/updatecustomer -
-	// JBoss AS7
+	// http://localhost:8080/SystemLK/resteasy/companyservice/updatecompany - Tomcat 7.0.x
+	// http://localhost:9090/SystemLK/resteasy/companyservice/updatecompany - JBoss AS7
 	@PUT
-	@Path("updatecustomer")
+	@Path("updatecompany")
 	@Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_FORM_URLENCODED })
-	public String updateCustomerInfo(CustomerType customerType);
+	public String updateCompanyInfo(CompanyType companyType);
 
-	// http://localhost:8080/SystemLK/resteasy/companyservice/deletecustomer -
-	// Tomcat 7.0.x
-	// http://localhost:9090/SystemLK/resteasy/companyservice/deletecustomer -
-	// JBoss AS7
+	// http://localhost:8080/SystemLK/resteasy/companyservice/deletecompany - Tomcat 7.0.x
+	// http://localhost:9090/SystemLK/resteasy/companyservice/deletecompany - JBoss AS7
 	@DELETE
-	@Path("deletecustomer")
+	@Path("deletecompany")
 	@Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_FORM_URLENCODED })
-	public String deleteCustomerInfo(CustomerType customerType);
+	public String deleteCompanyInfo(CompanyType companyType);
 
-	// http://localhost:8080/SystemLK/resteasy/companyservice/getallcustomer -
-	// Tomcat 7.0.x
-	// http://localhost:9090/SystemLK/resteasy/companyservice/getallcustomer -
-	// JBoss AS7
+	// http://localhost:8080/SystemLK/resteasy/companyservice/getallcompany - Tomcat 7.0.x
+	// http://localhost:9090/SystemLK/resteasy/companyservice/getallcompany - JBoss AS7
 	@GET
-	@Path("getallcustomer")
+	@Path("getallcompany")
 	@Consumes({ MediaType.APPLICATION_FORM_URLENCODED })
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	public CustomerListType getAllCustomerInfo();
+	public CompanyListType getAllCompanyInfo();
 }
