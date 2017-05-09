@@ -25,8 +25,8 @@ public class Item {
 	@Column(name= "DISCOUNT")
 	private String discount;
 	
-	@Column(name= "GOOD")
-	private int good;
+	@Column(name= "THING")
+	private int thing;
 	
 	@Column(name= "SERVICE")
 	private int service;
@@ -40,13 +40,13 @@ public class Item {
 	}
 	
 	// 7-arg parameterized-constructor
-	public Item(int id, String name, String price, String discount, int good, int service, int companyId){
+	public Item(int id, String name, String price, String discount, int thing, int service, int companyId){
 		super();
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.discount = discount;
-		this.good = good;
+		this.thing = thing;
 		this.service = service;
 		this.companyId = companyId;
 	}
@@ -84,12 +84,12 @@ public class Item {
 		this.discount = discount;
 	}
 
-	public int getGood() {
-		return good;
+	public int getThing() {
+		return thing;
 	}
 
-	public void setGood(int good) {
-		this.good = good;
+	public void setThing(int thing) {
+		this.thing = thing;
 	}
 
 	public int getService() {

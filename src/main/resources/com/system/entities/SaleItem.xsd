@@ -7,7 +7,7 @@
 	<xsd:element name="SaleItemType">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="customerId" type="xsd:int" />
+				<xsd:element name="id" type="xsd:int" />
 				<xsd:element name="totalPrice" type="xsd:string" />
 				<xsd:element name="itemId" type="xsd:int" />
 				<xsd:element name="discount" type="xsd:string" />

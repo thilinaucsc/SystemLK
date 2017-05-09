@@ -53,6 +53,13 @@ public class SaleItem {
 
 	// getters & setters
 	/**
+	 * @return the discount
+	 */
+	public String getDiscount() {
+		return discount;
+	}
+
+	/**
 	 * @return the id
 	 */
 	public int getId() {
@@ -64,13 +71,6 @@ public class SaleItem {
 	 */
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	/**
-	 * @return the discount
-	 */
-	public String getDiscount() {
-		return discount;
 	}
 
 	/**

@@ -9,7 +9,7 @@
 			<xsd:sequence>
 				<xsd:element name="id" type="xsd:int" />
 				<xsd:element name="name" type="xsd:string" />
-				<xsd:element name="agoodge" type="xsd:int" />
+				<xsd:element name="thing" type="xsd:int" />
 				<xsd:element name="price" type="xsd:string" />
 				<xsd:element name="discount" type="xsd:string" />
 				<xsd:element name="service" type="xsd:int" />

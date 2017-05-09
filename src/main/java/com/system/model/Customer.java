@@ -14,7 +14,7 @@ public class Customer {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID")
-	private int customerId;
+	private int id;
 
 	@Column(name = "NAME")
 	private String name;
@@ -43,9 +43,9 @@ public class Customer {
 	}
 
 	// 8-arg parameterized-constructor
-	public Customer(int customerId, String name, int age, String address, String discount, int registor, String password, String email) {
+	public Customer(int id, String name, int age, String address, String discount, int registor, String password, String email) {
 		super();
-		this.customerId = customerId;
+		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.address = address;
@@ -56,12 +56,12 @@ public class Customer {
 	}
 
 	// getters & setters
-	public int getCustomerId() {
-		return customerId;
+	public int getId() {
+		return id;
 	}
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {

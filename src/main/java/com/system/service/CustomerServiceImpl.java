@@ -21,7 +21,7 @@ public class CustomerServiceImpl implements ICustomerService {
 	public String createOrSaveNewCustomerInfo(CustomerType customerType) {
 
 		Customer newCustomer = new Customer();
-		newCustomer.setCustomerId(customerType.getCustomerId());
+		newCustomer.setId(customerType.getId());
 		newCustomer.setName(customerType.getName());
 		newCustomer.setAge(customerType.getAge());
 		newCustomer.setAddress(customerType.getAddress());
@@ -38,7 +38,7 @@ public class CustomerServiceImpl implements ICustomerService {
 		Customer getCustomer = customerDAO.getCustomer(customerId);
 
 		CustomerType customerType = new CustomerType();
-		customerType.setCustomerId(getCustomer.getCustomerId());
+		customerType.setId(getCustomer.getId());
 		customerType.setName(getCustomer.getName());
 		customerType.setAge(getCustomer.getAge());
 		customerType.setAddress(getCustomer.getAddress());
@@ -53,7 +53,7 @@ public class CustomerServiceImpl implements ICustomerService {
 	public String updateCustomerInfo(CustomerType customerType) {
 
 		Customer modifyCustomer = new Customer();
-		modifyCustomer.setCustomerId(customerType.getCustomerId());
+		modifyCustomer.setId(customerType.getId());
 		modifyCustomer.setName(customerType.getName());
 		modifyCustomer.setAge(customerType.getAge());
 		modifyCustomer.setAddress(customerType.getAddress());
@@ -68,7 +68,7 @@ public class CustomerServiceImpl implements ICustomerService {
 	public String deleteCustomerInfo(CustomerType customerType) {
 
 		Customer removeCustomer = new Customer();
-		removeCustomer.setCustomerId(customerType.getCustomerId());
+		removeCustomer.setId(customerType.getId());
 		removeCustomer.setName(customerType.getName());
 		removeCustomer.setAge(customerType.getAge());
 		removeCustomer.setAddress(customerType.getAddress());
@@ -87,7 +87,7 @@ public class CustomerServiceImpl implements ICustomerService {
 
 		for(Customer customer : lstCustomer){
 			CustomerType customerType = new CustomerType();
-			customerType.setCustomerId(customer.getCustomerId());
+			customerType.setId(customer.getId());
 			customerType.setName(customer.getName());
 			customerType.setAge(customer.getAge());
 			customerType.setAddress(customer.getAddress());

@@ -7,7 +7,7 @@
 	<xsd:element name="CustomerType">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="customerId" type="xsd:int" />
+				<xsd:element name="id" type="xsd:int" />
 				<xsd:element name="name" type="xsd:string" />
 				<xsd:element name="age" type="xsd:int" />
 				<xsd:element name="address" type="xsd:string" />
