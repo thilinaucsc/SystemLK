@@ -10,7 +10,6 @@
 	<description>RestEasy : Integrating with Spring and Hibernate ORM framework</description>
 	<url>http://maven.apache.org</url>
 	<!-- https://access.redhat.com/articles/112673 -->
-
 	<repositories>
 		<repository>
 			<id>jboss</id>
